@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" style="-fx-background-color: #8ecae6;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="authentication.login.HelloController">
+   <!-- Contents inside the XML file -->
+   <children>
+      <!-- Title -->
+      <Label layoutX="150.0" layoutY="40.0" prefHeight="20.0" prefWidth="100.0" style="-fx-text-fill: #219ebc;" text="LOGIN">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Label>
+
+      <!-- Panda image -->
+      <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="90.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@panda.png" />
+         </image>
+         <viewport>
+            <Rectangle2D />
+         </viewport>
+      </ImageView>
+
+      <!-- A rectangle to distinguish the input region -->
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b9eaf8" height="320.0" layoutX="15.0" layoutY="260.0" stroke="#a3a3a3" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="INSIDE" strokeWidth="2.0" width="370.0" />
+
+      <!-- A label to show the start of inputs -->
+      <Label layoutX="120.0" layoutY="290.0" text="Enter your details below" textFill="#023047">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+
+      <!-- Inputs and their icons -->
+      <TextField fx:id="usernameTextField" layoutX="80.0" layoutY="345.0" prefHeight="35.0" prefWidth="245.0" promptText="Username / Email">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <ImageView fx:id="usersIcon" fitHeight="35.0" fitWidth="35.0" layoutX="40.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@users.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="userPassword" layoutX="80.0" layoutY="400.0" prefHeight="35.0" prefWidth="245.0" promptText="Password">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </PasswordField>
+      <ImageView fx:id="passwordIcon" fitHeight="35.0" fitWidth="35.0" layoutX="40.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@lock.png" />
+         </image>
+      </ImageView>
+
+      <!-- A label to display error and success messages -->
+      <Label fx:id="invalidDetails" layoutX="80.0" layoutY="445.0" prefWidth="245.0" textFill="RED" />
+
+      <!-- Input, cancel and forgot password buttons -->
+      <Button fx:id="cancelButton" layoutX="85.0" layoutY="480.0" mnemonicParsing="false" onAction="#onCancelButtonClick" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: transparent; -fx-border-width: 2; -fx-border-color: #a5a5a5; -fx-border-radius: 5;" text="Cancel" textFill="#a3a3a3">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="loginButton" layoutX="225.0" layoutY="480.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #0077b6; -fx-border-radius: 5;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="forgotButton" layoutX="120.0" layoutY="530.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: transparent;" text="Forgot Password?" textFill="#a3a3a3" />
+   </children>
+</AnchorPane>
